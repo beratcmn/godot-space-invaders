@@ -12,6 +12,7 @@ config_version=4
 
 config/name="Space Invaders"
 run/main_scene="res://Scenes/World/World.tscn"
+config/icon="res://Assets/Kenney Space Shooter Pack/playerShip1_orange.png"
 
 [display]
 
