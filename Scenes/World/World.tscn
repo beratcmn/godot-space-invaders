@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Modules/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Kenney Space Shooter Pack/blue.png" type="Texture" id=2]
+[ext_resource path="res://Modules/EnemySpawner/EnemySpawner.tscn" type="PackedScene" id=3]
 
 [node name="World" type="Node2D"]
 
@@ -14,5 +15,21 @@ centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 480, 854 )
 
+[node name="EnemySpawner" parent="." instance=ExtResource( 3 )]
+
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 240, 775 )
+
+[node name="UI" type="Node" parent="."]
+
+[node name="PlayerScore" type="Label" parent="UI"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -91.0
+margin_right = -45.0
+margin_bottom = 31.0
+rect_scale = Vector2( 2, 2 )
+text = "0"
+align = 1
+valign = 1
+autowrap = true

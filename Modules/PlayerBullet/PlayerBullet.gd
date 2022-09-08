@@ -15,3 +15,8 @@ func _physics_process(delta: float) -> void:
 
 func _on_Timer_timeout() -> void:
 	queue_free()
+
+
+func _on_PlayerBullet_area_entered(area: Area2D) -> void:
+	if (area.is_in_group("Enemies")):
+		area.TakeDamage(50)
